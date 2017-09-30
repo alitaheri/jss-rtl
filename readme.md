@@ -73,7 +73,7 @@ import rtl from 'jss-rtl';
 
 const presets = preset().plugins;
 
-const jss = create({ plugins: [...presets, rtl] });
+const jss = create({ plugins: [...presets, rtl()] });
 
 // ...
 ```
