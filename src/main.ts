@@ -1,5 +1,7 @@
 import * as rtl from 'rtl-css-js';
 
+const convert = rtl['default'] || rtl;
+
 export interface JssRTLOptions {
   enabled?: boolean;
   opt?: 'in' | 'out';
@@ -31,7 +33,7 @@ export default function jssRTL({ enabled = true, opt = 'out' }: JssRTLOptions = 
         return style;
       }
 
-      return rtl(style);
+      return convert(style);
     },
   };
 }
