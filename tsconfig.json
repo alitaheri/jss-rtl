@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "target": "es5",
+    "module": "commonjs",
+    "alwaysStrict": true,
+    "noEmitOnError": false,
+    "strictNullChecks": true,
+    "pretty": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "declaration": true
+  },
+  "files": [
+    "src/main.ts"
+  ]
+}

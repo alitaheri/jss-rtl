@@ -1,0 +1,56 @@
+{
+  "name": "jss-rtl",
+  "description": "Flip styles using rtl-css-js",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ali Taheri Moghaddar",
+    "email": "ali.taheri.m@gmail.com"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alitaheri/jss-rtl.git"
+  },
+  "keywords": [
+    "cssinjs",
+    "css-in-js",
+    "css in js",
+    "jss",
+    "plugin",
+    "rtl",
+    "css-rtl-js",
+    "reset"
+  ],
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "prepublishOnly": "npm run build",
+    "lint": "tslint -e \"node_modules/**\" \"**/*.ts\"",
+    "test": "mocha --compilers ts:ts-node/register \"src/**/*.spec.ts\""
+  },
+  "license": "MIT",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.31",
+    "chai": "^4.1.2",
+    "jss": "^8.1.0",
+    "mocha": "^3.5.3",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^2.3.7",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-microsoft-contrib": "^5.0.1",
+    "typescript": "^2.5.3"
+  },
+  "peerDependencies": {
+    "jss": "^8.1.0"
+  },
+  "dependencies": {
+    "rtl-css-js": "^1.5.0"
+  }
+}
