@@ -16,7 +16,6 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
-    "sourceMap": true,
     "declaration": true
   },
   "files": [
