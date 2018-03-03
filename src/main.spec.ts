@@ -143,4 +143,50 @@ describe('jss-rtl', () => {
       ].join('\n'));
     });
   });
+
+  describe('font-face rule', () => {
+    let sheet: any;
+
+    beforeEach(() => {
+      jss = create().use(rtl());
+      sheet = jss.createStyleSheet({
+        '@font-face': [
+          {
+            'font-family': 'Roboto',
+            'font-style': 'normal',
+            'font-wieght': 'normal',
+            src: 'url(/fonts/Roboto.woff2) format("woff2")',
+          },
+          {
+            'font-family': 'Roboto',
+            'font-style': 'normal',
+            'font-wieght': 300,
+            src: 'url(/fonts/Roboto-Light.woff2) format("woff2")',
+          },
+        ]
+      });
+    });
+
+    it('should add rules', () => {
+      expect(sheet.getRule('@font-face')).to.be.ok;
+    });
+
+    it('should generate multiple font-face rules', () => {
+      expect(sheet.toString()).to.be.equals([
+        '@font-face {',
+        '  font-family: Roboto;',
+        '  font-style: normal;',
+        '  font-wieght: normal;',
+        '  src: url(/fonts/Roboto.woff2) format("woff2");',
+        '}',
+        '@font-face {',
+        '  font-family: Roboto;',
+        '  font-style: normal;',
+        '  font-wieght: 300;',
+        '  src: url(/fonts/Roboto-Light.woff2) format("woff2");',
+        '}',
+      ].join('\n'));
+    });
+  });
+
 });
