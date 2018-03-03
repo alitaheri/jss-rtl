@@ -28,7 +28,7 @@ describe('jss-rtl', () => {
 
     it('should generate correct CSS', () => {
       expect(sheet.toString()).to.be.equals([
-        '.a-0-1 {',
+        '.a-0-2-1 {',
         '  padding-right: 1px;',
         '}',
       ].join('\n'));
@@ -50,7 +50,7 @@ describe('jss-rtl', () => {
 
     it('should generate unchanged CSS', () => {
       expect(sheet.toString()).to.be.equals([
-        '.a-0-1 {',
+        '.a-0-6-1 {',
         '  padding-left: 1px;',
         '}',
       ].join('\n'));
@@ -59,7 +59,7 @@ describe('jss-rtl', () => {
     it('should remove the flip property from the style even when disabled', () => {
       sheet = jss.createStyleSheet({ a: { flip: true, 'padding-left': '1px' } });
       expect(sheet.toString()).to.be.equals([
-        '.a-0-2 {',
+        '.a-0-8-2 {',
         '  padding-left: 1px;',
         '}',
       ].join('\n'));
@@ -80,7 +80,7 @@ describe('jss-rtl', () => {
 
     it('should generate unchanged CSS', () => {
       expect(sheet.toString()).to.be.equals([
-        '.a-0-1 {',
+        '.a-0-10-1 {',
         '  padding-left: 1px;',
         '}',
       ].join('\n'));
@@ -105,10 +105,10 @@ describe('jss-rtl', () => {
 
     it('should generate unchanged CSS and remove the flip prop', () => {
       expect(sheet.toString()).to.be.equals([
-        '.a-0-1 {',
+        '.a-0-12-1 {',
         '  padding-right: 1px;',
         '}',
-        '.b-0-2 {',
+        '.b-0-12-2 {',
         '  padding-left: 1px;',
         '}',
       ].join('\n'));
@@ -134,15 +134,13 @@ describe('jss-rtl', () => {
 
     it('should generate changed CSS and remove the flip prop', () => {
       expect(sheet.toString()).to.be.equals([
-        '.a-0-1 {',
+        '.a-0-16-1 {',
         '  padding-left: 1px;',
         '}',
-        '.b-0-2 {',
+        '.b-0-16-2 {',
         '  padding-right: 1px;',
         '}',
       ].join('\n'));
     });
-
   });
-
 });
