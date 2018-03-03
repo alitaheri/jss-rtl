@@ -13,7 +13,7 @@ export default function jssRTL({ enabled = true, opt = 'out' }: JssRTLOptions = 
       if (rule.type === 'font-face') {
         return style;
       }
-      
+
       if (!enabled) {
         if (typeof style.flip === 'boolean') {
           delete style.flip;

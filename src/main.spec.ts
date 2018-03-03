@@ -163,7 +163,7 @@ describe('jss-rtl', () => {
             'font-wieght': 300,
             src: 'url(/fonts/Roboto-Light.woff2) format("woff2")',
           },
-        ]
+        ],
       });
     });
 
