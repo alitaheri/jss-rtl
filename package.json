@@ -1,7 +1,7 @@
 {
   "name": "jss-rtl",
   "description": "Flip styles using rtl-css-js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": {
     "name": "Ali Taheri Moghaddar",
     "email": "ali.taheri.m@gmail.com"
@@ -27,31 +27,31 @@
     "build": "rimraf lib && tsc",
     "prepublishOnly": "npm run build",
     "lint": "tslint -e \"node_modules/**\" \"**/*.ts\"",
-    "test": "mocha --compilers ts:ts-node/register \"src/**/*.spec.ts\""
+    "test": "mocha --require ts-node/register \"src/**/*.spec.ts\""
   },
   "license": "MIT",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "devDependencies": {
-    "@types/chai": "^4.0.4",
-    "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.34",
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.6",
     "chai": "^4.1.2",
     "jss": "^9.8.0",
     "jss-preset-default": "^4.3.0",
     "mocha": "^4.0.1",
     "rimraf": "^2.6.2",
-    "ts-loader": "^2.3.7",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "tslint-eslint-rules": "^4.1.1",
-    "tslint-microsoft-contrib": "^5.0.1",
-    "typescript": "^2.5.3"
+    "ts-loader": "^4.0.1",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.1.0",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.7.2"
   },
   "peerDependencies": {
     "jss": "^9.0.0"
   },
   "dependencies": {
-    "rtl-css-js": "^1.7.0"
+    "rtl-css-js": "^1.8.0"
   }
 }
