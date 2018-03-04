@@ -9,7 +9,11 @@ export interface JssRTLOptions {
 
 export default function jssRTL({ enabled = true, opt = 'out' }: JssRTLOptions = {}) {
   return {
-    onProcessStyle(style: any, _: any, sheet: any) {
+    onProcessStyle(style: any, rule: any, sheet: any) {
+      if (rule.type === 'font-face') {
+        return style;
+      }
+
       if (!enabled) {
         if (typeof style.flip === 'boolean') {
           delete style.flip;
