@@ -37,7 +37,7 @@ export default function jssRTL({ enabled = true, opt = 'out' }: JssRTLOptions = 
         return style;
       }
 
-      return convert(style);
+      return convert(typeof rule.toJSON === 'function' ? rule.toJSON() : style);
     },
   };
 }

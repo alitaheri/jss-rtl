@@ -38,6 +38,7 @@
     "@types/node": "^8.0.34",
     "chai": "^4.1.2",
     "jss": "^9.8.0",
+    "jss-preset-default": "^4.3.0",
     "mocha": "^4.0.1",
     "rimraf": "^2.6.2",
     "ts-loader": "^2.3.7",
