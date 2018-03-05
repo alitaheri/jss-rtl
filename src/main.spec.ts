@@ -2,6 +2,7 @@ import { expect } from 'chai';
 import rtl from './main';
 
 const { create, sheets } = require('jss');
+const jssPresetDefault = require('jss-preset-default').default;
 
 describe('jss-rtl', () => {
   let jss: any;
@@ -189,4 +190,55 @@ describe('jss-rtl', () => {
     });
   });
 
+  describe('array properties', () => {
+    let sheet: any;
+
+    beforeEach(() => {
+      jss = create().use(...jssPresetDefault().plugins, rtl());
+      sheet = jss.createStyleSheet({
+        '@global': {
+          '@font-face': {
+            src: 'url(/font/Roboot.woff2) format("woff2")',
+          },
+          '@media(min-width: 480px)': {
+            body: {
+              padding: [[10, 20, 30, 40]],
+            },
+          },
+          body: {
+            padding: [[1, 2, 3, 4]],
+          },
+        },
+        button: {
+          padding: [1, 2, 3, 4],
+          margin: [[1, 2, 3, 4], '!important'],
+          border: [
+            [1, 'solid', 'red'],
+            [2, 'solid', 'blue'],
+          ],
+        },
+      });
+    });
+
+    it('should generate space or comma separated values', () => {
+      expect(sheet.toString()).to.be.equals([
+        '@font-face {',
+        '  src: url(/font/Roboot.woff2) format("woff2");',
+        '}',
+        '@media(min-width: 480px) {',
+        '  body {',
+        '    padding: 10px 40px 30px 20px;',
+        '  }',
+        '}',
+        'body {',
+        '  padding: 1px 4px 3px 2px;',
+        '}',
+        '.button-0-22-1 {',
+        '  margin: 1px 4px 3px 2px !important;',
+        '  border: 1px solid red, 2px solid blue;',
+        '  padding: 1px 4px 3px 2px;',
+        '}',
+      ].join('\n'));
+    });
+  });
 });
