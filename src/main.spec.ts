@@ -208,8 +208,21 @@ describe('jss-rtl', () => {
           body: {
             padding: [[1, 2, 3, 4]],
           },
+          'body-no-flip': {
+            flip: false,
+            padding: [[1, 2, 3, 4]],
+          },
         },
         button: {
+          padding: [1, 2, 3, 4],
+          margin: [[1, 2, 3, 4], '!important'],
+          border: [
+            [1, 'solid', 'red'],
+            [2, 'solid', 'blue'],
+          ],
+        },
+        'button-no-flip': {
+          flip: false,
           padding: [1, 2, 3, 4],
           margin: [[1, 2, 3, 4], '!important'],
           border: [
@@ -233,10 +246,18 @@ describe('jss-rtl', () => {
         'body {',
         '  padding: 1px 4px 3px 2px;',
         '}',
+        'body-no-flip {',
+        '  padding: 1px 2px 3px 4px;',
+        '}',
         '.button-0-22-1 {',
         '  margin: 1px 4px 3px 2px !important;',
         '  border: 1px solid red, 2px solid blue;',
         '  padding: 1px 4px 3px 2px;',
+        '}',
+        '.button-no-flip-0-22-2 {',
+        '  margin: 1px 2px 3px 4px !important;',
+        '  border: 1px solid red, 2px solid blue;',
+        '  padding: 1px 2px 3px 4px;',
         '}',
       ].join('\n'));
     });
