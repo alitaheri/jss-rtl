@@ -10,7 +10,7 @@ Make sure you read [how to use
 plugins](https://github.com/cssinjs/jss/blob/master/docs/setup.md#setup-with-plugins)
 in general.
 
-**Important Notice**: This plugin must come last in the plugin array since it only transforms
+**Important Notice**: This plugin must come last in the plugin array since it can only transforms
 raw styles.
 
 ## Installation
@@ -110,6 +110,8 @@ jss.createStyleSheet(styles, { flip: false }); /* =>
 While using this library you might add `flip: false` or `flip: true` to some of your
 rule-sets. It is recommended that you disable this plugin instead of removing it
 from the plugins array so that it can at least remove the `flip` props from your rule-sets.
+
+This option is also the best method for switching between `rtl` and `ltr`.
 
 ```javascript
 jss.use(rtl({ enabled: false }));
