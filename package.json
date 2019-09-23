@@ -33,25 +33,25 @@
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "devDependencies": {
-    "@types/chai": "^4.1.4",
-    "@types/mocha": "^5.2.4",
-    "@types/node": "^10.5.2",
-    "chai": "^4.1.2",
-    "jss": "^9.8.7",
-    "jss-preset-default": "^4.5.0",
-    "mocha": "^5.2.0",
-    "rimraf": "^2.6.2",
-    "ts-loader": "^4.4.2",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.10.0",
-    "tslint-eslint-rules": "^5.3.1",
-    "tslint-microsoft-contrib": "^5.0.3",
-    "typescript": "^2.9.2"
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "chai": "^4.2.0",
+    "jss": "^10.0.0",
+    "jss-preset-default": "^10.0.0",
+    "mocha": "^6.2.0",
+    "rimraf": "^3.0.0",
+    "ts-loader": "^6.1.2",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "jss": "^9.0.0"
+    "jss": "^10.0.0"
   },
   "dependencies": {
-    "rtl-css-js": "^1.8.0"
+    "rtl-css-js": "^1.13.1"
   }
 }
