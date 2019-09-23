@@ -1,7 +1,7 @@
 {
   "name": "jss-rtl",
   "description": "Flip styles using rtl-css-js",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "author": {
     "name": "Ali Taheri Moghaddar",
     "email": "ali.taheri.m@gmail.com"
