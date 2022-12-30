@@ -39,7 +39,7 @@
     "chai": "^4.2.0",
     "jss": "^10.0.0",
     "jss-preset-default": "^10.0.0",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "rimraf": "^3.0.0",
     "ts-loader": "^6.1.2",
     "ts-node": "^8.4.1",
